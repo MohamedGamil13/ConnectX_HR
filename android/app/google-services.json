@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "992284120956",
+    "project_id": "connectxregtration",
+    "storage_bucket": "connectxregtration.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:992284120956:android:0d53f222353df70411b6f9",
+        "android_client_info": {
+          "package_name": "com.example.connectx_hr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBI31r6d6Z0zXNHcQ2q38QjMDdY9bzClPI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

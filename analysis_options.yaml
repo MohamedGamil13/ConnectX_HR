@@ -23,6 +23,27 @@ linter:
   rules:
     # avoid_print: false  # Uncomment to disable the `avoid_print` rule
     # prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
+    # --- ERROR PRONE (Rules that catch real bugs) ---
+    - avoid_dynamic_calls # Prevents calling methods on 'dynamic'
+    - unawaited_futures # Forces you to 'await' or mark as unawaited
+    - avoid_void_async # Use Future<void> instead of void for async
+    - cancel_subscriptions # Ensures StreamSubscriptions are closed
+    - throw_in_finally # Prevents losing original errors
+    - avoid_slow_async_io # Warns against blocking the UI thread with Sync IO
+
+    # --- STYLE & CLEANLINESS ---
+    - always_declare_return_types # No more "getData() { ... }" without a type
+    - prefer_final_locals # Encourages immutability
+    - prefer_const_constructors # Massive performance boost for Flutter
+    - avoid_positional_boolean_parameters # Use ({bool isDone}) instead of (true)
+    - always_put_required_named_parameters_first
+    - use_enums # Suggests Enums instead of magic Strings/Ints
+
+    # --- FLUTTER SPECIFIC ---
+    - use_key_in_widget_constructors
+    - avoid_print # Use debugPrint or a logger instead
+    - sort_child_properties_last # Standardizes Widget code look
+
 
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options
