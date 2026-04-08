@@ -3,6 +3,7 @@ import 'package:connectx_hr/core/widgets/connectx_logo.dart';
 import 'package:connectx_hr/core/widgets/custom_text.dart';
 import 'package:connectx_hr/core/widgets/custom_textfield.dart';
 import 'package:connectx_hr/features/auth/presentation/screens/widgets/auth_button.dart';
+import 'package:connectx_hr/features/dashboard/presentation/screens/dashboard_screen.dart';
 import 'package:flutter/material.dart';
 
 class SignInScreen extends StatelessWidget {
@@ -63,7 +64,17 @@ class SignInScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 30),
-                AuthButton(text: "Authenticate", onPressed: () {}),
+                AuthButton(
+                  text: "Authenticate",
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const DashboardScreen(),
+                      ),
+                    );
+                  },
+                ),
               ],
             ),
           ),
