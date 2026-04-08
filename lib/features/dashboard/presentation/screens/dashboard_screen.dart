@@ -2,6 +2,7 @@ import 'package:connectx_hr/core/theme/app_colors.dart';
 import 'package:connectx_hr/features/dashboard/presentation/screens/widgets/custom_nav_bar.dart';
 import 'package:connectx_hr/features/dashboard/presentation/screens/widgets/dash_board_header.dart';
 import 'package:connectx_hr/features/dashboard/presentation/screens/widgets/qr_scan_card.dart';
+import 'package:connectx_hr/features/sessions/presentation/ai_create_session_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'widgets/activity_item.dart';
@@ -65,7 +66,14 @@ class DashboardScreen extends StatelessWidget {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const AICreateSessionScreen(),
+                        ),
+                      );
+                    },
                     child: const Text(
                       "View All",
                       style: TextStyle(color: AppColors.primary),
