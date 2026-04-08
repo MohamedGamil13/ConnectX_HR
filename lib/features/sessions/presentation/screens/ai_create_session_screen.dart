@@ -1,8 +1,9 @@
 import 'package:connectx_hr/core/theme/app_colors.dart';
 import 'package:connectx_hr/features/dashboard/presentation/screens/widgets/dash_board_header.dart';
-import 'package:connectx_hr/features/sessions/presentation/widgets/ai_engine_status.dart';
-import 'package:connectx_hr/features/sessions/presentation/widgets/ai_input_field.dart';
-import 'package:connectx_hr/features/sessions/presentation/widgets/generated_draft_card.dart';
+import 'package:connectx_hr/features/sessions/presentation/screens/students_screen.dart';
+import 'package:connectx_hr/features/sessions/presentation/screens/widgets/ai_engine_status.dart';
+import 'package:connectx_hr/features/sessions/presentation/screens/widgets/ai_input_field.dart';
+import 'package:connectx_hr/features/sessions/presentation/screens/widgets/generated_draft_card.dart';
 import 'package:flutter/material.dart';
 
 class AICreateSessionScreen extends StatelessWidget {
@@ -61,9 +62,22 @@ class AICreateSessionScreen extends StatelessWidget {
                       color: AppColors.surfaceContainerHigh,
                       borderRadius: BorderRadius.circular(8),
                     ),
-                    child: const Text(
-                      "98% Match",
-                      style: TextStyle(color: AppColors.primary, fontSize: 10),
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const StudentsScreen(),
+                          ),
+                        );
+                      },
+                      child: const Text(
+                        "98% Match",
+                        style: TextStyle(
+                          color: AppColors.primary,
+                          fontSize: 10,
+                        ),
+                      ),
                     ),
                   ),
                 ],
