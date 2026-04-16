@@ -1,3 +1,4 @@
+import 'package:connectx_hr/core/DI/locator.dart';
 import 'package:connectx_hr/core/theme/app_theme.dart';
 import 'package:connectx_hr/features/auth/presentation/screens/sign_in_screen.dart';
 import 'package:connectx_hr/firebase_options.dart';
@@ -7,6 +8,7 @@ import 'package:flutter/material.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  setupLocator();
   runApp(const ConnectXReg());
 }
 

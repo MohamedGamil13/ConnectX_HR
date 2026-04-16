@@ -59,7 +59,7 @@ class SignInScreen extends StatelessWidget {
                   child: Text(
                     "FORGOT ACCESS?",
                     style: TextStyle(
-                      color: AppColors.primary, // تم التحديث
+                      color: AppColors.primary,
                       fontSize: 12,
                       fontWeight: FontWeight.bold,
                     ),
