@@ -20,6 +20,7 @@ class SignInScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                const SizedBox(height: 25),
                 const ConnectxLogo(),
                 const Center(child: ShimmeringConnectXText()),
                 const SizedBox(height: 40),
@@ -52,6 +53,7 @@ class SignInScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 10),
+                const SizedBox(height: 7),
                 const Align(
                   alignment: Alignment.centerRight,
                   child: Text(
@@ -63,7 +65,7 @@ class SignInScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 30),
+                const SizedBox(height: 35),
                 AuthButton(
                   text: "Authenticate",
                   onPressed: () {
